@@ -1,9 +1,16 @@
+import 'package:chat_app/Pages/sign_up_page.dart';
 import 'package:chat_app/widgets/color_manager.dart';
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  bool _obscure = true;
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
@@ -92,7 +99,7 @@ class LoginPage extends StatelessWidget {
                     ),
                   ),
                   child: TextFormField(
-                    obscureText: true,
+                    obscureText: _obscure,
                     style: TextStyle(
                       color: Colors.white,
                     ),
@@ -101,9 +108,14 @@ class LoginPage extends StatelessWidget {
                       hintStyle: TextStyle(
                         color: const Color.fromARGB(103, 255, 255, 255),
                       ),
-                      suffixIcon: Icon(
-                        Icons.password,
-                        color: Colors.white60,
+                      suffixIcon: IconButton(
+                        onPressed: () {
+                          setState(() {
+                            _obscure = !_obscure;
+                          });
+                        },
+                        icon: Icon(
+                            _obscure ? Icons.visibility : Icons.visibility_off),
                       ),
                       border: InputBorder.none,
                     ),
@@ -129,7 +141,14 @@ class LoginPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => SignUpPage(),
+                          ),
+                        );
+                      },
                       child: Container(
                         padding: EdgeInsets.all(10.0),
                         width: 200,
