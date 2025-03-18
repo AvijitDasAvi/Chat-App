@@ -128,38 +128,44 @@ class LoginPage extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Container(
-                      padding: EdgeInsets.all(10.0),
-                      width: 200,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(20.0),
-                      ),
-                      child: Center(
-                        child: Text(
-                          "Sign Up",
-                          style: TextStyle(
-                            color: ColorManager.buttonColor,
-                            fontSize: 20.0,
-                            fontWeight: FontWeight.bold,
+                    GestureDetector(
+                      onTap: () {},
+                      child: Container(
+                        padding: EdgeInsets.all(10.0),
+                        width: 200,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(20.0),
+                        ),
+                        child: Center(
+                          child: Text(
+                            "Sign Up",
+                            style: TextStyle(
+                              color: ColorManager.buttonColor,
+                              fontSize: 20.0,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                         ),
                       ),
                     ),
-                    Container(
-                      padding: EdgeInsets.all(10.0),
-                      width: 200,
-                      decoration: BoxDecoration(
-                        color: ColorManager.buttonColor,
-                        borderRadius: BorderRadius.circular(20.0),
-                      ),
-                      child: Center(
-                        child: Text(
-                          "LogIn",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 20.0,
-                            fontWeight: FontWeight.bold,
+                    GestureDetector(
+                      onTap: () {},
+                      child: Container(
+                        padding: EdgeInsets.all(10.0),
+                        width: 200,
+                        decoration: BoxDecoration(
+                          color: ColorManager.buttonColor,
+                          borderRadius: BorderRadius.circular(20.0),
+                        ),
+                        child: Center(
+                          child: Text(
+                            "LogIn",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20.0,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                         ),
                       ),
