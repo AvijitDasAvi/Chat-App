@@ -1,4 +1,4 @@
-import 'package:chat_app/pages/chat_page.dart';
+import 'package:chat_app/features/onboarding/page/onboarding_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Hash Talk',
-      home: ChatPage(),
+      home: OnboardingPage(),
     );
   }
 }

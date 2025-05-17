@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../widgets/color_manager.dart';
+import '../../../widgets/color_manager.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
