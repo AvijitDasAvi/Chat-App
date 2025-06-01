@@ -1,4 +1,4 @@
-import 'package:chat_app/Pages/sign_up_page.dart';
+import 'package:chat_app/features/sign_up/screen/sign_up_page.dart';
 import 'package:chat_app/widgets/color_manager.dart';
 import 'package:flutter/material.dart';
 
