@@ -1,3 +1,5 @@
+
+import 'package:chat_app/features/sign_up/screen/sign_up_page.dart';
 import 'package:chat_app/widgets/bottom_curve_clipper.dart';
 import 'package:chat_app/widgets/color_manager.dart';
 import 'package:flutter/material.dart';
@@ -57,25 +59,33 @@ class _OnboardingPageState extends State<OnboardingPage> {
                       color: ColorManager.buttonColor,
                       borderRadius: BorderRadius.circular(20.0),
                     ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Image.asset(
-                          "assets/images/google.png",
-                          height: 40.0,
-                          width: 40.0,
-                          fit: BoxFit.cover,
-                        ),
-                        SizedBox(width: 20.0),
-                        Text(
-                          "Sign in with Google",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.w800,
-                            fontSize: 20.0,
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => SignUpPage()));
+                      },
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            "assets/images/google.png",
+                            height: 40.0,
+                            width: 40.0,
+                            fit: BoxFit.cover,
                           ),
-                        ),
-                      ],
+                          SizedBox(width: 20.0),
+                          Text(
+                            "Sign in with Google",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w800,
+                              fontSize: 20.0,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
