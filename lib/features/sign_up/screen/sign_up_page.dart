@@ -1,4 +1,4 @@
-import 'package:chat_app/Pages/login_page.dart';
+import 'package:chat_app/features/login/page/login_page.dart';
 import 'package:chat_app/widgets/color_manager.dart';
 import 'package:flutter/material.dart';
 
