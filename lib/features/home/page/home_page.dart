@@ -37,7 +37,7 @@ class _HomePageState extends State<HomePage> {
                   width: 10.0,
                 ),
                 Text(
-                  "Hello,",
+                  "Hello, ",
                   style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
@@ -45,7 +45,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 Text(
-                  " Avijit",
+                  userName,
                   style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
@@ -86,7 +86,7 @@ class _HomePageState extends State<HomePage> {
             padding: const EdgeInsets.only(
                 top: 5.0, left: 20.0, right: 20.0, bottom: 10.0),
             child: Text(
-              "ChatUp",
+              "Hash Talk",
               style: TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
@@ -129,8 +129,12 @@ class _HomePageState extends State<HomePage> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => ChatPage(userName: userName,)));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ChatPage(
+                                    userName: userName,
+                                  )));
                     },
                     child: Material(
                       elevation: 3.0,
@@ -161,7 +165,7 @@ class _HomePageState extends State<HomePage> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  "Avijit Das",
+                                  userName,
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
                                     color: Colors.black,

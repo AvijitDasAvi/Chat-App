@@ -1,5 +1,7 @@
+import 'package:chat_app/features/home/page/home_page.dart';
 import 'package:chat_app/features/onboarding/page/onboarding_page.dart';
 import 'package:firebase_app_check/firebase_app_check.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -23,7 +25,6 @@ void main() async {
       print("Firebase initialization failed: $e");
     }
   }
-
   runApp(const MyApp());
 }
 
@@ -34,7 +35,20 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Hash Talk',
-      home: OnboardingPage(),
+      home: StreamBuilder<User?>(
+        stream: FirebaseAuth.instance.authStateChanges(),
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return const Scaffold(
+              body: Center(child: CircularProgressIndicator()),
+            );
+          }
+          if (snapshot.hasData && snapshot.data != null) {
+            return const HomePage();
+          }
+          return const OnboardingPage();
+        },
+      ),
       builder: EasyLoading.init(),
     );
   }
