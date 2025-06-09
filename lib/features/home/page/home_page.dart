@@ -11,6 +11,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  final String userName = 'Avijit Das';
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
@@ -129,7 +130,7 @@ class _HomePageState extends State<HomePage> {
                   GestureDetector(
                     onTap: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => ChatPage()));
+                          MaterialPageRoute(builder: (context) => ChatPage(userName: userName,)));
                     },
                     child: Material(
                       elevation: 3.0,

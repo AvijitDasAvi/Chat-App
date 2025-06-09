@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "798558724963",
+    "project_id": "hash-talk",
+    "storage_bucket": "hash-talk.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:798558724963:android:9de00d532bcdb9aca5a956",
+        "android_client_info": {
+          "package_name": "com.example.flutter_application_1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwQ_jD58zG68NIJXVfzDmQ9JP6KoHMgoQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

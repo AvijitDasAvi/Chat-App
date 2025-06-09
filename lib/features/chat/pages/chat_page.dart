@@ -2,7 +2,8 @@ import 'package:chat_app/widgets/color_manager.dart';
 import 'package:flutter/material.dart';
 
 class ChatPage extends StatefulWidget {
-  const ChatPage({super.key});
+  final String userName;
+  const ChatPage({super.key, required this.userName});
 
   @override
   State<ChatPage> createState() => _ChatPageState();
@@ -38,7 +39,7 @@ class _ChatPageState extends State<ChatPage> {
                     width: MediaQuery.of(context).size.width / 5,
                   ),
                   Text(
-                    "Avijit Das",
+                    widget.userName,
                     style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
