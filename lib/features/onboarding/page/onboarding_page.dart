@@ -4,14 +4,9 @@ import 'package:chat_app/widgets/bottom_curve_clipper.dart';
 import 'package:chat_app/widgets/color_manager.dart';
 import 'package:flutter/material.dart';
 
-class OnboardingPage extends StatefulWidget {
+class OnboardingPage extends StatelessWidget {
   const OnboardingPage({super.key});
 
-  @override
-  State<OnboardingPage> createState() => _OnboardingPageState();
-}
-
-class _OnboardingPageState extends State<OnboardingPage> {
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;

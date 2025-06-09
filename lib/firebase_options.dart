@@ -51,7 +51,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyBwQ_jD58zG68NIJXVfzDmQ9JP6KoHMgoQ',
-    appId: '1:798558724963:android:9de00d532bcdb9aca5a956',
+    appId: '1:798558724963:android:48f5f8f905338748a5a956',
     messagingSenderId: '798558724963',
     projectId: 'hash-talk',
     storageBucket: 'hash-talk.firebasestorage.app',
@@ -65,4 +65,5 @@ class DefaultFirebaseOptions {
     storageBucket: 'hash-talk.firebasestorage.app',
     iosBundleId: 'com.example.flutterApplication1',
   );
+
 }
