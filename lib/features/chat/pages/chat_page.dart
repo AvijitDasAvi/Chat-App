@@ -15,7 +15,7 @@ class _ChatPageState extends State<ChatPage> {
       backgroundColor: ColorManager.appBarColor,
       body: Container(
         margin: EdgeInsets.only(
-          top: 40.0,
+          top: 60.0,
         ),
         child: Column(
           children: [
@@ -86,7 +86,7 @@ class _ChatPageState extends State<ChatPage> {
                             style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
-                              fontSize: 18.0,
+                              fontSize: 16.0,
                             ),
                           ),
                         )
@@ -112,11 +112,68 @@ class _ChatPageState extends State<ChatPage> {
                             style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
-                              fontSize: 18.0,
+                              fontSize: 16.0,
                             ),
                           ),
                         ),
                       ],
+                    ),
+                    Spacer(),
+                    Row(
+                      children: [
+                        Container(
+                          padding: EdgeInsets.all(8),
+                          decoration: BoxDecoration(
+                            color: ColorManager.buttonColor,
+                            shape: BoxShape.circle,
+                          ),
+                          child: Icon(
+                            Icons.mic,
+                            size: 25,
+                            color: Colors.white,
+                          ),
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Expanded(
+                          child: Container(
+                            decoration: BoxDecoration(
+                              color: Colors.grey[200],
+                              borderRadius: BorderRadius.circular(30.0),
+                            ),
+                            margin: EdgeInsets.only(),
+                            padding: EdgeInsets.symmetric(horizontal: 10.0),
+                            child: TextField(
+                              decoration: InputDecoration(
+                                suffixIcon: Icon(Icons.attach_file),
+                                hintText: "Type a message",
+                                border: InputBorder.none,
+                              ),
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          padding: EdgeInsets.all(8),
+                          decoration: BoxDecoration(
+                            color: ColorManager.buttonColor,
+                            shape: BoxShape.circle,
+                          ),
+                          child: Center(
+                            child: Icon(
+                              Icons.send,
+                              size: 25,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 20,
                     )
                   ],
                 ),

@@ -1,3 +1,4 @@
+import 'package:chat_app/features/home/page/home_page.dart';
 import 'package:chat_app/features/sign_up/screen/sign_up_page.dart';
 import 'package:chat_app/widgets/color_manager.dart';
 import 'package:flutter/material.dart';
@@ -138,7 +139,7 @@ class _LoginPageState extends State<LoginPage> {
                   height: 20.0,
                 ),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     GestureDetector(
                       onTap: () {
@@ -151,7 +152,7 @@ class _LoginPageState extends State<LoginPage> {
                       },
                       child: Container(
                         padding: EdgeInsets.all(10.0),
-                        width: 170,
+                        width: width / 2.5,
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(20.0),
@@ -169,10 +170,15 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     ),
                     GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => HomePage()));
+                      },
                       child: Container(
                         padding: EdgeInsets.all(10.0),
-                        width: 170,
+                        width: width / 2.5,
                         decoration: BoxDecoration(
                           color: ColorManager.buttonColor,
                           borderRadius: BorderRadius.circular(20.0),
