@@ -1,7 +1,7 @@
-
-import 'package:chat_app/features/sign_up/screen/sign_up_page.dart';
+import 'package:chat_app/services/auth_service.dart';
 import 'package:chat_app/widgets/bottom_curve_clipper.dart';
 import 'package:chat_app/widgets/color_manager.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class OnboardingPage extends StatelessWidget {
@@ -55,11 +55,14 @@ class OnboardingPage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(20.0),
                     ),
                     child: GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => SignUpPage()));
+                      onTap: () async {
+                        try {
+                          await AuthService().logWithGoogle(context);
+                        } catch (e) {
+                          if (kDebugMode) {
+                            print("Sign-in error: $e");
+                          }
+                        }
                       },
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
